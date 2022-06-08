@@ -3,6 +3,8 @@ import Section from '../components/section'
 import Layout from "../components/layouts/article"
 import { WorkGridItem} from "../components/grid-item";
 import thumbHercules from "../public/images/works/hercules.png"
+import thumbBkgram from "../public/images/works/bkgram.png"
+
 const Works = () =>{
     return (
         <Layout>
@@ -18,8 +20,8 @@ const Works = () =>{
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.4}>
-                        <WorkGridItem id='hercules' title='hercules' thumbnail={thumbHercules}>
-                            A stock dashboard app
+                        <WorkGridItem id='bkgram' title='bkgram' thumbnail={thumbBkgram}>
+                            A photo-sharing social network
                         </WorkGridItem>
                     </Section>
                 </SimpleGrid>

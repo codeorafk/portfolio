@@ -13,7 +13,7 @@ import {
   import Section from"../../components/section"
   const Work = () => (
     <Layout title="hercules">
-      <Container>
+      <Container maxW='container.md'>
         <Title>
           hercules stock app <Badge>2022</Badge>
         </Title>
@@ -42,11 +42,8 @@ import {
         </List>
         <Section delay={0.1}>
             <Heading as='h3' variant="section-title">
-                Architecture
+                System Architecture
             </Heading>
-            <P>
-                Kiến trúc gồm 3 phần:
-            </P>
             <P>
             Web application: fetch data from API endpoint and visualize data 
             </P>
