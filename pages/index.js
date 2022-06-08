@@ -6,13 +6,19 @@ import {
     Image, 
     useColorModeValue,
     Button,
+    SimpleGrid,
+    Link
 } from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import Section from"../components/section"
 import Paragraph from "../components/paragraph"
 import { BioSection, BioYear } from "../components/bio"
-
+import {
+    IoLogoInstagram,
+    IoLogoGithub,
+    IoLogoFacebook,
+} from 'react-icons/io5'
 const Page = () => {
     return (
         <Layout>
@@ -88,6 +94,42 @@ const Page = () => {
                         <BioYear> 05/2022</BioYear>
                         Talent in Grab VietNam Bootcamp
                     </BioSection>
+                </Section>
+
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        On the web
+                    </Heading>
+
+                    <SimpleGrid columns={[2,2,3]} gap={6}>
+                        <Link href="https://facebook.com/addifyouknow" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoFacebook />}
+                            >
+                                @addifyouknow
+                            </Button>
+                        </Link>
+                        <Link href="https://instagram.com/uow._.y" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoInstagram />}
+                            >
+                                @uow._.y
+                            </Button>
+                        </Link>
+                        <Link href="https://github.com/codeorafk" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<IoLogoGithub />}
+                            >
+                                @codeorafk
+                            </Button>
+                        </Link>
+                    </SimpleGrid>
                 </Section>
             </Container>
         </Layout>

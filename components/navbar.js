@@ -34,6 +34,28 @@ const LinkItem = ({ href, path, children}) => {
     )
 }
 
+const LinkMenuItem = ({ href, path, children}) => {
+    const active = path === href
+    const inactiveColor = useColorModeValue('gray.800','whiteAlpha.900')
+    return (
+        <NextLink href ='/' passHref>
+            <MenuItem
+                as={Link}
+                bg={active? 'glassTeal': undefined}
+                color={active ? '#202023' : inactiveColor}
+                className='navBg'
+                style={{"&:hover": {
+                    background: "#efefef"
+                  }}}
+            >
+                {children}
+                
+            </MenuItem>
+            
+        </NextLink>
+    )
+}
+
 const Navbar = props => {
     const { path } = props
     return (
@@ -85,16 +107,10 @@ const Navbar = props => {
                                 aria-label='Options'
                             />
                             <MenuList>
-                                <NextLink href ='/' passHref>
-                                    <MenuItem as={Link}>About</MenuItem>
-                                </NextLink>
-                                <NextLink href ='/works' passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
-                                </NextLink>
-                                <NextLink href ='/posts' passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
-                                </NextLink>
-                                <MenuItem as={Link} href=''>View Source</MenuItem>
+                                <LinkMenuItem href='/' path={path}>About</LinkMenuItem>
+                                <LinkMenuItem href='/works' path={path}>Works</LinkMenuItem>
+                                <LinkMenuItem href='/posts' path={path}>Posts</LinkMenuItem>
+                                <LinkMenuItem href='https://github.com/codeorafk/portfolio' path={path}>View Source</LinkMenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
