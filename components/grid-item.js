@@ -21,7 +21,7 @@ export const GridItem = ({children, href, title, thumbnail}) => (
 )
 
 export const WorkGridItem = ({ children, id, title, thumbnail})=>(
-    <Box w="100%" align='center'>
+    <Box w="100%" align='center' className="grid-item">
         <NextLink href={`/works/${id}`}>
             <LinkBox cursor='pointer'>
                 <Image src={thumbnail}
@@ -43,6 +43,15 @@ export const GridItemStyle = () => (
       styles={`
         .grid-item-thumbnail {
           border-radius: 12px;
+        }
+
+        .grid-item{
+            transition: all .2s ease-in-out;
+            border-radius: 12px;
+        }
+
+        .grid-item:hover { 
+            transform: scale(1.1);
         }
       `}
     />
