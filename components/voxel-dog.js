@@ -111,7 +111,7 @@ const VoxelDog = () => {
 
       return () => {
         cancelAnimationFrame(req)
-        // renderer.dispose()
+        renderer.dispose()
       }
     }
   }, [])
