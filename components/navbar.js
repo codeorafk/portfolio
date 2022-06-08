@@ -13,7 +13,8 @@ import{
     MenuButton,
     IconButton,
     Flex,
-    useColorModeValue
+    useColorModeValue,
+    Button
 } from '@chakra-ui/react'
 import ThemeToggleButton from './theme-toggle-button'
 import { HamburgerIcon} from '@chakra-ui/icons'
@@ -27,6 +28,7 @@ const LinkItem = ({ href, path, children}) => {
             p={2}
             bg={active? 'glassTeal': undefined}
             color={active ? '#202023' : inactiveColor}
+            rounded={5}
             >
                 {children}
             </Link>
@@ -43,15 +45,10 @@ const LinkMenuItem = ({ href, path, children}) => {
                 as={Link}
                 bg={active? 'glassTeal': undefined}
                 color={active ? '#202023' : inactiveColor}
-                className='navBg'
-                style={{"&:hover": {
-                    background: "#efefef"
-                  }}}
             >
                 {children}
                 
             </MenuItem>
-            
         </NextLink>
     )
 }
@@ -95,6 +92,14 @@ const Navbar = props => {
                     <LinkItem href='/posts' path={path}>
                         Posts
                     </LinkItem>
+                    <Link href='https://github.com/codeorafk/portfolio' target='_blank'>
+                        <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                            >
+                                View Source
+                            </Button>
+                    </Link>
                 </Stack>
                 <Box flex={1} align="right">
                     <ThemeToggleButton />
@@ -110,7 +115,7 @@ const Navbar = props => {
                                 <LinkMenuItem href='/' path={path}>About</LinkMenuItem>
                                 <LinkMenuItem href='/works' path={path}>Works</LinkMenuItem>
                                 <LinkMenuItem href='/posts' path={path}>Posts</LinkMenuItem>
-                                <LinkMenuItem href='https://github.com/codeorafk/portfolio' path={path}>View Source</LinkMenuItem>
+                                <MenuItem as={Link} href='https://github.com/codeorafk/portfolio' target="_blank">View Source</MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
