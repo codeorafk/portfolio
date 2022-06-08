@@ -38,7 +38,7 @@ const LinkMenuItem = ({ href, path, children}) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray.800','whiteAlpha.900')
     return (
-        <NextLink href ='/' passHref>
+        <NextLink href={href} passHref>
             <MenuItem
                 as={Link}
                 bg={active? 'glassTeal': undefined}
