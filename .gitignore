@@ -2,4 +2,5 @@
 dist
 .vercel
 .env
+.vscode
 node_modules
