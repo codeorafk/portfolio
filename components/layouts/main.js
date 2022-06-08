@@ -10,6 +10,7 @@ const Main = ({children, router}) => {
             <Head>
                 <meta name='viewport' content='width=device-width initial-scale=1'/>
                 <title> Nguyen Tran Quoc Uy - Homepage</title>
+                <link rel="shortcut icon" href='/images/footprint-dark.png' />
             </Head>
 
             <Navbar path={router.asPath} />
