@@ -13,12 +13,12 @@ const Works = () =>{
 
                 <SimpleGrid columns={[1,1,2]} gap={6}>
                     <Section delay={0.4}>
-                        <WorkGridItem id='Hercules' title='Hercules' thumbnail={thumbHercules}>
+                        <WorkGridItem id='hercules' title='hercules' thumbnail={thumbHercules}>
                             A stock dashboard app
                         </WorkGridItem>
                     </Section>
                     <Section delay={0.4}>
-                        <WorkGridItem id='Hercules' title='Hercules' thumbnail={thumbHercules}>
+                        <WorkGridItem id='hercules' title='hercules' thumbnail={thumbHercules}>
                             A stock dashboard app
                         </WorkGridItem>
                     </Section>
