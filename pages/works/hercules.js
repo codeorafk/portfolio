@@ -4,7 +4,8 @@ import {
     Link,
     List,
     ListItem,
-    Heading
+    Heading,
+    AspectRatio,
   } from '@chakra-ui/react'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
   import { Title, WorkImage, Meta } from '../../components/work'
@@ -15,7 +16,7 @@ import {
     <Layout title="hercules">
       <Container maxW='container.md'>
         <Title>
-          hercules stock app <Badge>2022</Badge>
+          Hercules stock app <Badge>2022</Badge>
         </Title>
         <P>
          A stock app provide reputable data source from financial reports of hundreds of companies listed on HOSE,
@@ -39,23 +40,71 @@ import {
                 https://www.github.com/ <ExternalLinkIcon mx="2px" />
                 </Link>
             </ListItem>
+            <ListItem>
+                <Meta>Demo</Meta>
+                <Link href="https://www.youtube.com/watch?v=7duJnIuSSYs">
+                    https://www.youtube.com/ <ExternalLinkIcon mx="2px" />
+                </Link>
+            </ListItem>
         </List>
+        <Section delay={0.5}>
+            <Heading as='h3' variant="section-title">
+                Functional Requirement
+            </Heading>
+
+            <div style={{ marginLeft: '20px' }}>
+                <P>1. Visualize barchart, treemap, column, table </P>
+                <P>2. Fetch data from API Server <b>(RestAPI)</b> </P>
+                <P>3. Export charts to pdf, xlxs, csv, jpg</P>
+                <P>4. Search company info by its symbol </P>
+            </div>
+
+        </Section>
+        <Section delay={0.5}>
+            <Heading as='h3' variant="section-title">
+                Non-functional Requirement
+            </Heading>
+
+            <div style={{ marginLeft: '20px' }}>
+                <P>1. <b>Single-page</b> routing </P>
+                <P>2. <b>Real-time </b>application (use setInterval) </P>
+                <P>3. Processing time is <b>not over 3s</b> </P>
+            </div>
+
+        </Section>
         <Section delay={0.1}>
             <Heading as='h3' variant="section-title">
                 System Architecture
             </Heading>
             <P>
-            Web application: fetch data from API endpoint and visualize data 
+            <b>Web application:</b> fetch data from API endpoint and visualize data 
             </P>
             <P>
-            API Server: as an intermediary, retrieves data from the database, normalizes the data, and returns the API
+            <b>API Server:</b> as an intermediary, retrieves data from the database, normalizes the data, and returns the API
             </P>
             <P>
-            python Server: as an daily crawler, crawles data to database
+            <b>Python Server:</b> as an daily crawler, crawles data to database
             </P>
+            <WorkImage src="/images/works/hercules_01.png" alt="hercules" />
         </Section>
-        <WorkImage src="/images/works/hercules_01.png" alt="Inkdrop" />
-        
+        <Section delay={0.5}>
+            <Heading as='h3' variant="section-title">
+                Demo web application
+            </Heading>
+            <AspectRatio maxW="640px" ratio={1.7} my={4} mx='auto'>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/KyoV7jTMw_c"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{borderRadius:'20px'}}
+                >
+                </iframe>
+            </AspectRatio>
+        </Section>
       </Container>
     </Layout>
   )

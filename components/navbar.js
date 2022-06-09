@@ -1,7 +1,7 @@
 import Logo from './logo'
 import NextLink from 'next/link'
 
-import{
+import {
     Container,
     Box,
     Link,
@@ -17,18 +17,18 @@ import{
     Button
 } from '@chakra-ui/react'
 import ThemeToggleButton from './theme-toggle-button'
-import { HamburgerIcon} from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
-const LinkItem = ({ href, path, children}) => {
+const LinkItem = ({ href, path, children }) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray.800','whiteAlpha.900')
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
     return (
         <NextLink href={href}>
             <Link
-            p={2}
-            bg={active? 'glassTeal': undefined}
-            color={active ? '#202023' : inactiveColor}
-            rounded={5}
+                p={2}
+                bg={active ? 'glassTeal' : undefined}
+                color={active ? '#202023' : inactiveColor}
+                rounded={5}
             >
                 {children}
             </Link>
@@ -36,18 +36,18 @@ const LinkItem = ({ href, path, children}) => {
     )
 }
 
-const LinkMenuItem = ({ href, path, children}) => {
+const LinkMenuItem = ({ href, path, children }) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray.800','whiteAlpha.900')
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
     return (
         <NextLink href={href} passHref>
             <MenuItem
                 as={Link}
-                bg={active? 'glassTeal': undefined}
+                bg={active ? 'glassTeal' : undefined}
                 color={active ? '#202023' : inactiveColor}
             >
                 {children}
-                
+
             </MenuItem>
         </NextLink>
     )
@@ -60,17 +60,17 @@ const Navbar = props => {
             position='fixed'
             as='nav'
             w='100%'
-            bg={useColorModeValue('#fffff40','#20202380')}
-            style={{backdropFilter: 'blur(10px)'}}
+            bg={useColorModeValue('#fffff40', '#20202380')}
+            style={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
             {...props}
         >
-            <Container 
-                display="flex" 
-                p={2} 
-                maxW="container.md" 
-                wrap="wrap" 
-                align="center" 
+            <Container
+                display="flex"
+                p={2}
+                maxW="container.md"
+                wrap="wrap"
+                align="center"
                 justify="space-between"
             >
                 <Flex align="center" mr={5}>
@@ -79,12 +79,12 @@ const Navbar = props => {
                     </Heading>
                 </Flex>
                 <Stack
-                    direction={{base: 'column', md: 'row'}}
-                    display={{base: 'none', md: 'flex'}}
-                    width={{base:'full', nmd:'auto'}}
+                    direction={{ base: 'column', md: 'row' }}
+                    display={{ base: 'none', md: 'flex' }}
+                    width={{ base: 'full', nmd: 'auto' }}
                     alignItems='center'
                     flexGrow={1}
-                    mt={{ base: 4, md: 0}}
+                    mt={{ base: 4, md: 0 }}
                 >
                     <LinkItem href='/works' path={path}>
                         Works
@@ -94,21 +94,21 @@ const Navbar = props => {
                     </LinkItem>
                     <Link href='https://github.com/codeorafk/portfolio' target='_blank'>
                         <Button
-                                variant="ghost"
-                                colorScheme="teal"
-                            >
-                                View Source
-                            </Button>
+                            variant="ghost"
+                            colorScheme="teal"
+                        >
+                            View Source
+                        </Button>
                     </Link>
                 </Stack>
                 <Box flex={1} align="right">
                     <ThemeToggleButton />
-                    <Box ml={2} display={{base: 'inline-block', md:'none'}}>
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu isLazy id="navbar-menu">
-                            <MenuButton 
-                                as={IconButton} 
-                                icon={<HamburgerIcon />} 
-                                variant='outline' 
+                            <MenuButton
+                                as={IconButton}
+                                icon={<HamburgerIcon />}
+                                variant='outline'
                                 aria-label='Options'
                             />
                             <MenuList>

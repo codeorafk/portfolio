@@ -47,8 +47,8 @@ const Work = () => (
                 </Heading>
 
                 <div style={{ marginLeft: '20px' }}>
-                    <P>1. Log in to the social network through the account and log out of the social network </P>
-                    <P>2. Change your password, account name </P>
+                    <P>1. <b>Log in</b> to the social network through the account and <b>log out</b> of the social network </P>
+                    <P>2. Change your password, account name, forget password <b>(demo on mailtrap)</b> </P>
                     <P>3. Edit basic information including: full name, date of birth, phone number, gender.</P>
                     <P>4. Post management: post, delete, edit my posts (photos) </P>
                     <P>5. Follow other users </P>
@@ -57,6 +57,17 @@ const Work = () => (
                     <P>8. Interact with people by liking, commenting, sharing other people&apos;s posts </P>
                     <P>9. Go to a person&apos;s profile and view basic information, posts of that person </P>
                     <P>10. Search for users by their account name</P>
+                </div>
+
+            </Section>
+            <Section delay={0.5}>
+                <Heading as='h3' variant="section-title">
+                    Non-functional Requirement
+                </Heading>
+
+                <div style={{ marginLeft: '20px' }}>
+                    <P>1. <b>Single-page</b> routing </P>
+                    <P>2. <b>Real-time</b> application (use setInterval) </P>
                 </div>
 
             </Section>
@@ -79,6 +90,7 @@ const Work = () => (
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
+                        style={{borderRadius:'20px'}}
                     >
                     </iframe>
                 </AspectRatio>
