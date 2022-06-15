@@ -9,7 +9,7 @@ const Main = ({children, router}) => {
         <Box as="main" pb={8}>
             <Head>
                 <meta name='viewport' content='width=device-width initial-scale=1'/>
-                <title> Nguyen Tran Quoc Uy - Homepage</title>
+                <title>Homepage - Nguyen Tran Quoc Uy</title>
                 <link rel="shortcut icon" href='/images/footprint-dark.png' />
             </Head>
 
