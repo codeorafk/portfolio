@@ -69,7 +69,7 @@ const Navbar = props => {
             as='nav'
             w='100%'
             bg={{base: useColorModeValue('#f0e7db', '#202023'), sm: useColorModeValue('#f0e7db80', '#20202380')}}
-            boxShadow={{base:useColorModeValue('0px 10px 10px 5px #202023', '0px 10px 10px 5px #f0e7db'), sm: 'none'}}
+            boxShadow={{base:useColorModeValue('0px 10px 7px 5px #202023', '0px 10px 7px 5px #f0e7db'), sm: 'none'}}
             style={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
             {...props}
@@ -95,6 +95,9 @@ const Navbar = props => {
                     justifyContent='center'
                     flexGrow={1}
                 >
+                    <LinkItem href='/' path={path}>
+                        Home
+                    </LinkItem>
                     <LinkItem href='/works' path={path}>
                         Works
                     </LinkItem>
@@ -121,7 +124,7 @@ const Navbar = props => {
                                 aria-label='Options'
                             />
                             <MenuList>
-                                <LinkMenuItem href='/' path={path}>About</LinkMenuItem>
+                                <LinkMenuItem href='/' path={path}>Home</LinkMenuItem>
                                 <LinkMenuItem href='/works' path={path}>Works</LinkMenuItem>
                                 <LinkMenuItem href='/posts' path={path}>Posts</LinkMenuItem>
                                 <MenuItem as={Link} href='https://github.com/codeorafk/portfolio' target="_blank">View Source</MenuItem>
