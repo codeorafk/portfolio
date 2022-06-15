@@ -68,7 +68,8 @@ const Navbar = props => {
             top={{ base: 'auto', sm: '0'}}
             as='nav'
             w='100%'
-            bg={{base: useColorModeValue('#ffffff', '#202023'), md: useColorModeValue('#ffffff40', '#20202380')}}
+            bg={{base: useColorModeValue('#f0e7db', '#202023'), sm: useColorModeValue('#f0e7db80', '#20202380')}}
+            boxShadow={{base:useColorModeValue('0px 10px 10px 5px #202023', '0px 10px 10px 5px #f0e7db'), sm: 'none'}}
             style={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
             {...props}
