@@ -58,6 +58,9 @@ const Navbar = props => {
     return (
         <Box
             position='fixed'
+            bottom={{base:'0', md:'none'}}
+            top={{base:'none', md:'0'}}
+
             as='nav'
             w='100%'
             bg={useColorModeValue('#fffff40', '#20202380')}
@@ -81,7 +84,7 @@ const Navbar = props => {
                 <Stack
                     direction={{ base: 'column', md: 'row' }}
                     display={{ base: 'none', md: 'flex' }}
-                    width={{ base: 'full', nmd: 'auto' }}
+                    width={{ base: 'full', md: 'auto' }}
                     alignItems='center'
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}

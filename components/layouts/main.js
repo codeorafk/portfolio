@@ -12,7 +12,14 @@ const Main = ({children, router}) => {
                 <title>Homepage - Nguyen Tran Quoc Uy</title>
                 <link rel="shortcut icon" href='/images/footprint-dark.png' />
             </Head>
-
+            <style jsx global>{`
+                .bot{
+                    bottom: 0px;
+                }
+                .top{
+                    top: 0px;
+                }
+            `}</style>
             <Navbar path={router.asPath} />
 
             <Container maxW="container.lg" pt={14}>
