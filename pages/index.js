@@ -38,7 +38,7 @@ const Page = () => {
                             Nguyen Tran Quoc Uy
                         </Heading>
                         <p>Full-Stack Developer</p>
-                        <p>(Intern, ReactJS/ NextJS/ VueJS, Laravel)</p>
+                        <p>(Fresher, ReactJS/ NextJS/ VueJS, Laravel)</p>
                     </Box>
                     <Box 
                         flexShrink={0} 
@@ -63,7 +63,7 @@ const Page = () => {
                         Work
                     </Heading>
                     <Paragraph>
-                        I&apos;m an intern and a full-stack developer based in Ho Chi Minh 
+                        I&apos;m a full-stack developer based in Ho Chi Minh 
                         city with passion for building web application. I&apos;m young and surely
                         inexperienced, but eager to learn. I has a knack for all things, from
                         planning to solving problems with code. When not online, I 
@@ -91,8 +91,8 @@ const Page = () => {
                         (Trường Đại học Bách Khoa thành phố Hồ Chí Minh) 
                     </BioSection>
                     <BioSection>
-                        <BioYear> 05/2022</BioYear>
-                        Talent in Grab VietNam Bootcamp
+                        <BioYear> 03/2022</BioYear>
+                        Intern at Grab VietNam 
                     </BioSection>
                 </Section>
 
