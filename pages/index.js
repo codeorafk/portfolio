@@ -22,7 +22,7 @@ import {
 const Page = () => {
     return (
         <Layout>
-            <Container maxW='container.xl'>
+            <Container maxW='container.xl' px={[2, 5, 10]}>
                 <Box 
                     borderRadius='lg'
                     bg={useColorModeValue('whiteAlpha.700', 'whiteAlpha.200')} 
@@ -30,7 +30,7 @@ const Page = () => {
                     mb={6} 
                     align="center" 
                 >
-                    Hello, I&apos;m a full-stack developer based in VietNam
+                    Hello, I&apos;m a full-stack web developer based in VietNam
                 </Box>
                 <Box display={{md: 'flex'}}>
                     <Box flexGrow={1}>

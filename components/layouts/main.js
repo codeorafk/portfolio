@@ -8,9 +8,9 @@ const Main = ({children, router}) => {
     return (
         <Box as="main" pb={8}>
             <Head>
-                <meta name='viewport' content='width=device-width initial-scale=1'/>
                 <title>Homepage - Nguyen Tran Quoc Uy</title>
                 <link rel="shortcut icon" href='/images/footprint-dark.png' />
+                <meta name='viewport' content='width=device-width initial-scale=1'/>
             </Head>
             <Navbar path={router.asPath} />
 
