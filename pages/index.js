@@ -1,60 +1,52 @@
-import NextLink from "next/link"
-import { 
-    Container, 
-    Box, 
-    Heading, 
-    Image, 
-    useColorModeValue,
-    Button,
-    SimpleGrid,
-    Link
-} from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
-import Layout from "../components/layouts/article"
-import Section from"../components/section"
-import Paragraph from "../components/paragraph"
-import { BioSection, BioYear } from "../components/bio"
 import {
-    IoLogoInstagram,
-    IoLogoGithub,
-    IoLogoFacebook,
+    Box, Button, Container, Heading,
+    Image, Link, SimpleGrid, useColorModeValue
+} from "@chakra-ui/react"
+import NextLink from "next/link"
+import {
+    IoLogoFacebook, IoLogoGithub, IoLogoInstagram
 } from 'react-icons/io5'
+import { BioSection, BioYear } from "../components/bio"
+import Layout from "../components/layouts/article"
+import Paragraph from "../components/paragraph"
+import Section from "../components/section"
 const Page = () => {
     return (
         <Layout>
             <Container maxW='container.xl' px={[2, 5, 10]}>
-                <Box 
+                <Box
                     borderRadius='lg'
-                    bg={useColorModeValue('whiteAlpha.700', 'whiteAlpha.200')} 
-                    p={3} 
-                    mb={6} 
-                    align="center" 
+                    bg={useColorModeValue('whiteAlpha.700', 'whiteAlpha.200')}
+                    p={3}
+                    mb={6}
+                    align="center"
                 >
                     Hello, I&apos;m a full-stack web developer based in VietNam
                 </Box>
-                <Box display={{md: 'flex'}}>
+                <Box display={{ md: 'flex' }}>
                     <Box flexGrow={1}>
                         <Heading as='h2' variant='page-title'>
                             Nguyen Tran Quoc Uy
                         </Heading>
                         <p>Full-Stack Developer</p>
-                        <p>(Fresher, ReactJS/ NextJS/ VueJS, Laravel)</p>
+                        <p>(Junior, ReactJS/ NextJS/ VueJS / Angular, Laravel / NestJS)</p>
                     </Box>
-                    <Box 
-                        flexShrink={0} 
-                        mt={{base: 4, md: 0}}
-                        ml = {{md: 6}}
+                    <Box
+                        flexShrink={0}
+                        mt={{ base: 4, md: 0 }}
+                        ml={{ md: 6 }}
                         align="center"
                     >
-                        <Image 
-                            borderColor={useColorModeValue("gray.800","whiteAlpha.900")}
+                        <Image
+                            borderColor={useColorModeValue("gray.800", "whiteAlpha.900")}
                             borderWidth={3}
                             borderStyle="solid"
-                            maxWidth="250px" 
-                            display="inline-block" 
-                            borderRadius="full" 
-                            src="/images/profile.jpg" 
-                            alt="Profile Image" 
+                            maxWidth="250px"
+                            display="inline-block"
+                            borderRadius="full"
+                            src="/images/profile.jpg"
+                            alt="Profile Image"
                         />
                     </Box>
                 </Box>
@@ -63,10 +55,10 @@ const Page = () => {
                         Work
                     </Heading>
                     <Paragraph>
-                        I&apos;m a full-stack developer based in Ho Chi Minh 
+                        I&apos;m a web developer based in Ho Chi Minh
                         city with passion for building web application. I&apos;m young and surely
                         inexperienced, but eager to learn. I has a knack for all things, from
-                        planning to solving problems with code. When not online, I 
+                        planning to solving problems with code. When not online, I
                         love hanging out alone and enjoy natural and wild beauties
                     </Paragraph>
                     <Box align="center" my={4}>
@@ -88,11 +80,15 @@ const Page = () => {
                     <BioSection>
                         <BioYear> 10/2019</BioYear>
                         Studied Computer Science at Ho Chi Minh city University of Technology
-                        (Trường Đại học Bách Khoa thành phố Hồ Chí Minh) 
+                        (Trường Đại học Bách Khoa thành phố Hồ Chí Minh)
                     </BioSection>
                     <BioSection>
                         <BioYear> 03/2022</BioYear>
-                        Intern at Grab VietNam 
+                        Intern at Grab VietNam
+                    </BioSection>
+                    <BioSection>
+                        <BioYear> 07/2022</BioYear>
+                        Junior web developer at FPT Information System
                     </BioSection>
                 </Section>
 
@@ -101,7 +97,7 @@ const Page = () => {
                         On the web
                     </Heading>
 
-                    <SimpleGrid columns={[2,2,3]} gap={6}>
+                    <SimpleGrid columns={[2, 2, 3]} gap={6}>
                         <Link href="https://facebook.com/addifyouknow" target="_blank">
                             <Button
                                 variant="ghost"
